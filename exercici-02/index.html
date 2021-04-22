@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivell 02</title>
+    <script>
+        //VARIABLES
+        var nom_array = ["M", "A", "R","4","C", "O", "S"];
+        var nom_str = "MARCOS";
+        var vocales = ["A", "E", "I", "O", "U"];
+        var consonantes = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Y", "Z"];
+        var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var i = 0;
+        var e = 0;
+        var x = 0;
+        var y = 0;
+        //BASE
+        console.log("Partim del nom " + nom_str);
+        //ITERACION VOCAL/CONSONANTES 
+
+        for (i = 0; i < nom_array.length; i++) {
+            for (e = 0; e < vocales.length; e++) {
+                for (x = 0; x < consonantes.length; x++) {
+                    for (y = 0; y < numeros.length; y++) {
+                        if (nom_array[i] == consonantes[x]) {
+                            console.log("He trobat la CONSONANT " + consonantes[x]);
+                        } else if (nom_array[i] == vocales[e]) {
+                            console.log("He trobat la VOCAL " + vocales[e]);
+                        } else if (nom_array[i] == numeros[y]) {
+                            console.log("Els noms de persones no contenen el numero " + numeros[y]);
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

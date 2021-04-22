@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 03</title>
+    <script>
+     
+        //const fullName = "MARCOS LOSSIUS";
+        var fullName = ["M", "A", "R","C", "O","S", " ", "L","O","S","S","I","U","S"];
+        const myMap = new Map();
+        let times = 0;
+        var i = 0;
+        var e = 0;
+
+
+
+        for (i = 0; i < fullName.length; i++) {
+
+            for (e = 0; e < fullName.length; e++) {
+                if (fullName[i].match(fullName[e])) {
+                    times = times + 1;
+                }
+                myMap.set(fullName[i], times);
+            }
+            times = 0;
+
+        }
+
+        console.log(myMap);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
