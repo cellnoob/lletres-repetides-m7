@@ -30,7 +30,40 @@ function miFuncionN1Ex1(){
 function miFuncionN1Ex2(){
     //limpia panel
     miFuncionClean();
+            //VARIABLES
+            var nom_array = ["M", "A", "R","4","C", "O", "S"];
 
+            //funcion check number
+            var isNum = function isNumberic(num){
+                return !isNaN(num);
+            };
+            //funcion check vocal
+            var isVow = function isVowel(vow){
+                return (/^[aeiou]$/i).test(vow);
+            }
+           //funcion check consonante
+           var isCon = function isConsonant(con){
+                return (/^[bcdfghjklmnpqrstvwxys]$/i).test(con);
+           }
+    
+    
+           console.log(nom_array);
+           
+           for(i = 0; i < nom_array.length; i++){
+               if (isNum(nom_array[i])){
+                console.log("Els noms de persones no contenen el numero " + nom_array[i]);
+                document.getElementById("mostrarDatosN1").innerHTML += "Els noms de persones no contenen el numero " + nom_array[i];
+
+           }else if(isVow(nom_array[i])){
+            console.log("Les VOCALS que apareixen son " + nom_array[i]);
+            document.getElementById("mostrarDatosN1").innerHTML += "He trobat la VOCAL " + nom_array[i];
+           }else if(isCon(nom_array[i])){
+            console.log("Les CONSONANTS que apareixen son " + nom_array[i]);
+            document.getElementById("mostrarDatosN1").innerHTML += "He trobat la CONSONANT " + nom_array[i];
+        }
+    }
+        
+/*
       //VARIABLES
       var nom_array = ["M", "A", "R","4","C", "O", "S"];
       var nom_str = "MARCOS";
@@ -64,7 +97,7 @@ function miFuncionN1Ex2(){
               }
           }
       }
-
+*/
 
 }
 
